@@ -1,0 +1,55 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "amplify-androidpushnot-dev-121703-authRole",
+			"UnauthRoleArn": "arn:aws:iam::299854659728:role/amplify-androidpushnot-dev-121703-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::299854659728:role/amplify-androidpushnot-dev-121703-authRole",
+			"Region": "eu-west-1",
+			"DeploymentBucketName": "amplify-androidpushnot-dev-121703-deployment",
+			"UnauthRoleName": "amplify-androidpushnot-dev-121703-unauthRole",
+			"StackName": "amplify-androidpushnot-dev-121703",
+			"StackId": "arn:aws:cloudformation:eu-west-1:299854659728:stack/amplify-androidpushnot-dev-121703/e42c6190-61ff-11ea-a0df-06ebe7208a7c",
+			"AmplifyAppId": "d3ozi0s4dcufzv"
+		}
+	},
+	"auth": {
+		"cognito40abb345": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-androidpushnot-dev-121703-deployment/amplify-cfn-templates/auth/cognito40abb345-cloudformation-template.yml",
+				"logicalId": "authcognito40abb345"
+			},
+			"lastPushTimeStamp": "2020-03-09T12:56:10.709Z",
+			"output": {
+				"IdentityPoolId": "eu-west-1:e17b1206-41bb-4221-bbfe-8a3378ae16f8",
+				"IdentityPoolName": "androidpushnot_identitypool_c484228b__dev"
+			},
+			"lastPushDirHash": "QDeKcw78slGXpLm9l4yftka5dko="
+		}
+	},
+	"notifications": {
+		"androidpushnot3nuJm": {
+			"service": "Pinpoint",
+			"output": {
+				"Arn": "arn:aws:mobiletargeting:eu-west-1:299854659728:apps/fae7d0d4b10646a78691c05c0778d084",
+				"Id": "fae7d0d4b10646a78691c05c0778d084",
+				"Name": "androidpushnot3nuJm-dev",
+				"tags": {},
+				"Region": "eu-west-1",
+				"FCM": {
+					"ApplicationId": "fae7d0d4b10646a78691c05c0778d084",
+					"CreationDate": "2020-03-09T12:54:08.229Z",
+					"Enabled": true,
+					"HasCredential": true,
+					"Id": "gcm",
+					"IsArchived": false,
+					"LastModifiedDate": "2020-03-09T12:54:08.229Z",
+					"Platform": "GCM",
+					"Version": 1
+				}
+			},
+			"lastPushTimeStamp": "2020-03-09T12:54:01.946Z"
+		}
+	}
+}
