@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "125524270498",
+    "firebase_url": "https://amplifypushnotifications.firebaseio.com",
+    "project_id": "amplifypushnotifications",
+    "storage_bucket": "amplifypushnotifications.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125524270498:android:596bd4d1439c93d1d5e6fb",
+        "android_client_info": {
+          "package_name": "com.amplifypush"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125524270498-jop2ap5m84vk9p2tk9m2chgcg8co3c47.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoWR3pCXN3MGp3xlmOHudN9jqZXWbwrq8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125524270498-jop2ap5m84vk9p2tk9m2chgcg8co3c47.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

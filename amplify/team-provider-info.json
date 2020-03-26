@@ -1,0 +1,27 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-androidpushnot-dev-121703-authRole",
+            "UnauthRoleArn": "arn:aws:iam::299854659728:role/amplify-androidpushnot-dev-121703-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::299854659728:role/amplify-androidpushnot-dev-121703-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "amplify-androidpushnot-dev-121703-deployment",
+            "UnauthRoleName": "amplify-androidpushnot-dev-121703-unauthRole",
+            "StackName": "amplify-androidpushnot-dev-121703",
+            "StackId": "arn:aws:cloudformation:eu-west-1:299854659728:stack/amplify-androidpushnot-dev-121703/e42c6190-61ff-11ea-a0df-06ebe7208a7c",
+            "AmplifyAppId": "d3ozi0s4dcufzv"
+        },
+        "categories": {
+            "auth": {
+                "cognito40abb345": {}
+            },
+            "notifications": {
+                "Pinpoint": {
+                    "Name": "androidpushnot3nuJm-dev",
+                    "Id": "fae7d0d4b10646a78691c05c0778d084",
+                    "Region": "eu-west-1"
+                }
+            }
+        }
+    }
+}
