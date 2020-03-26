@@ -19,5 +19,21 @@
 			"providerPlugin": "awscloudformation",
 			"build": true
 		}
+	},
+	"api": {
+		"api4254bec5": {
+			"service": "API Gateway",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [
+				{
+					"category": "function",
+					"resourceName": "reactNativeTest",
+					"attributes": [
+						"Name",
+						"Arn"
+					]
+				}
+			]
+		}
 	}
 }

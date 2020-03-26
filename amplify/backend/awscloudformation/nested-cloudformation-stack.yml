@@ -102,6 +102,33 @@
 				}
 			}
 		},
+		"apiapi4254bec5": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/amplify-androidpushnot-dev-121703-deployment/amplify-cfn-templates/api/api4254bec5-cloudformation-template.json",
+				"Parameters": {
+					"authRoleName": {
+						"Ref": "AuthRoleName"
+					},
+					"unauthRoleName": {
+						"Ref": "UnauthRoleName"
+					},
+					"functionreactNativeTestName": {
+						"Fn::GetAtt": [
+							"functionreactNativeTest",
+							"Outputs.Name"
+						]
+					},
+					"functionreactNativeTestArn": {
+						"Fn::GetAtt": [
+							"functionreactNativeTest",
+							"Outputs.Arn"
+						]
+					},
+					"env": "dev"
+				}
+			}
+		},
 		"UpdateRolesWithIDPFunction": {
 			"DependsOn": [
 				"AuthRole",

@@ -6,7 +6,14 @@ const awsmobile = {
     "aws_cognito_region": "eu-west-1",
     "oauth": {},
     "aws_mobile_analytics_app_id": "fae7d0d4b10646a78691c05c0778d084",
-    "aws_mobile_analytics_app_region": "eu-west-1"
+    "aws_mobile_analytics_app_region": "eu-west-1",
+    "aws_cloud_logic_custom": [
+        {
+            "name": "api4254bec5",
+            "endpoint": "https://1n6e4h8vn7.execute-api.eu-west-1.amazonaws.com/dev",
+            "region": "eu-west-1"
+        }
+    ]
 };
 
 

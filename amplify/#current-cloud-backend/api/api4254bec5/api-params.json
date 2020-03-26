@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "reactNativeTest",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "api4254bec5",
+    "apiName": "api4254bec5",
+    "functionArns": [
+        {
+            "lambdaFunction": "reactNativeTest"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-androidpushnot-dev-121703-authRole",
+        "unAuthRoleName": "amplify-androidpushnot-dev-121703-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "reactNativeTest",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
