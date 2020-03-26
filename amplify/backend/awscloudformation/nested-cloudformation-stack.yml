@@ -93,6 +93,15 @@
 				}
 			}
 		},
+		"functionreactNativeTest": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/amplify-androidpushnot-dev-121703-deployment/amplify-cfn-templates/function/reactNativeTest-cloudformation-template.json",
+				"Parameters": {
+					"env": "dev"
+				}
+			}
+		},
 		"UpdateRolesWithIDPFunction": {
 			"DependsOn": [
 				"AuthRole",

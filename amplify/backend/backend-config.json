@@ -1,16 +1,23 @@
 {
-    "auth": {
-        "cognito40abb345": {
-            "service": "Cognito",
-            "providerPlugin": "awscloudformation"
-        }
-    },
-    "notifications": {
-        "androidpushnot3nuJm": {
-            "service": "Pinpoint",
-            "channels": [
-                "FCM"
-            ]
-        }
-    }
+	"auth": {
+		"cognito40abb345": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"notifications": {
+		"androidpushnot3nuJm": {
+			"service": "Pinpoint",
+			"channels": [
+				"FCM"
+			]
+		}
+	},
+	"function": {
+		"reactNativeTest": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true
+		}
+	}
 }
