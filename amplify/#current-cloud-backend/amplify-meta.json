@@ -20,7 +20,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/amplify-androidpushnot-dev-121703-deployment/amplify-cfn-templates/auth/cognito40abb345-cloudformation-template.yml",
 				"logicalId": "authcognito40abb345"
 			},
-			"lastPushTimeStamp": "2020-03-26T11:31:14.820Z",
+			"lastPushTimeStamp": "2020-04-16T14:36:59.742Z",
 			"output": {
 				"IdentityPoolId": "eu-west-1:e17b1206-41bb-4221-bbfe-8a3378ae16f8",
 				"IdentityPoolName": "androidpushnot_identitypool_c484228b__dev"
@@ -57,21 +57,21 @@
 			"service": "Lambda",
 			"providerPlugin": "awscloudformation",
 			"build": true,
-			"lastBuildTimeStamp": "2020-03-26T11:12:25.910Z",
-			"lastPackageTimeStamp": "2020-03-26T11:12:25.974Z",
+			"lastBuildTimeStamp": "2020-04-16T14:36:28.357Z",
+			"lastPackageTimeStamp": "2020-04-16T14:36:28.409Z",
 			"distZipFilename": "reactNativeTest-69574f42655774495762-build.zip",
 			"providerMetadata": {
 				"s3TemplateURL": "https://s3.amazonaws.com/amplify-androidpushnot-dev-121703-deployment/amplify-cfn-templates/function/reactNativeTest-cloudformation-template.json",
 				"logicalId": "functionreactNativeTest"
 			},
-			"lastPushTimeStamp": "2020-03-26T11:31:14.833Z",
+			"lastPushTimeStamp": "2020-04-16T14:36:59.750Z",
 			"output": {
 				"Region": "eu-west-1",
 				"Arn": "arn:aws:lambda:eu-west-1:299854659728:function:reactNativeTest-dev",
 				"Name": "reactNativeTest-dev",
 				"LambdaExecutionRole": "androidpushnotLambdaRole3e4b94bb-dev"
 			},
-			"lastPushDirHash": "KYujkNho4xXZCjQHx8EiG/wrMuA="
+			"lastPushDirHash": "1yV4SvGfVfRPFMA2gw+nIwsQVCw="
 		}
 	},
 	"api": {
@@ -92,7 +92,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/amplify-androidpushnot-dev-121703-deployment/amplify-cfn-templates/api/api4254bec5-cloudformation-template.json",
 				"logicalId": "apiapi4254bec5"
 			},
-			"lastPushTimeStamp": "2020-03-26T11:31:14.833Z",
+			"lastPushTimeStamp": "2020-04-16T14:36:59.746Z",
 			"output": {
 				"ApiName": "api4254bec5",
 				"RootUrl": "https://1n6e4h8vn7.execute-api.eu-west-1.amazonaws.com/dev"
