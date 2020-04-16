@@ -7,6 +7,7 @@ import Amplify,{Auth, Analytics} from 'aws-amplify';
 import config from './aws-exports';
 Amplify.configure(config);
 //Amplify.Logger.LOG_LEVEL = 'DEBUG';
+
 Amplify.configure({
     Auth: {
 
@@ -23,16 +24,13 @@ Amplify.configure({
         // OPTIONAL - Amazon Cognito Web Client ID (26-char alphanumeric string)
         userPoolWebClientId: '7bo7vq9upj1vrr34uj6l6podqn',
 
-        authenticationFlowType: 'USER_PASSWORD_AUTH',
-         // OPTIONAL - Hosted UI configuration
-        oauth: {
-            domain: ' bgarrethblahblah.auth.eu-west-1.amazoncognito.com',
-            scope: ['phone', 'email', 'profile', 'openid', 'aws.cognito.signin.user.admin'],
-            redirectSignIn: '',
-            redirectSignOut: '',
-            responseType: 'code' // or 'token', note that REFRESH token will only be generated when the responseType is code
-        }
+        authenticationFlowType: 'USER_PASSWORD_AUTH'
     }
+});
+
+PushNotification.configure({
+    appId:'fae7d0d4b10646a78691c05c0778d084',
+    requestIOSPermissions: false // OPTIONAL, defaults to true
 });
 
 // set up the push notification callback functions
@@ -41,8 +39,13 @@ PushNotification.onRegister(token => {
   console.log("got here")
       Analytics.updateEndpoint({
         address: token
-      });
+      }).then(() => {});
 });
+
+PushNotification.onRegister((token) => {
+  console.log('in app registration', token);
+});
+
 PushNotification.onNotification(notification => {
   if (notification.foreground) {
     console.log('onNotification foreground', notification);
@@ -63,36 +66,30 @@ PushNotification.onNotificationOpened(notification => {
 });
 
 
-async function signIn() {
-  try  {
-    const user = await Auth.signIn("bgarreth", "Password1#");
-    console.log('USER', user);
-  } catch (err) {
-    console.log('Err: ', err);
-  }
-}
-
-
 async function associateEndpointWithUser(setUserId) {
+
   // retrieve and print the unique internal userid
-//  const {
-//    attributes: {sub},
-//  } = await Auth.currentUserInfo();
-//  console.log('userId', sub);
-//  setUserId(sub);
-let sub = "123456";
-setUserId(sub);
-console.log(sub);
-  // associate the device endpoint with the user
-  Analytics.updateEndpoint({userId: sub});
+  const {
+    attributes: {sub},
+  } = await Auth.currentAuthenticatedUser();
+    setUserId(sub);
+     Analytics.updateEndpoint({optOut: 'NONE',userId: sub}).then(() => {});
+
+  //setUserId(sub);
+//let sub = "fec73077-e07a-43d6-ac20-c4d57bc03d4b";
+//setUserId(sub);
+console.log("sub",sub);
+//  // associate the device endpoint with the user
+//  Analytics.updateEndpoint({optOut: 'NONE',userId: sub}).then(() => {});
 }
 const App = (() => {
-//const App = withAuthenticator(() => {
+//const App = withAuthenticator(includeGreetings: true() => {
   // retrieve and print the endpoint id, for testing only
   const [endpointId, setEndpointId] = useState('');
   useEffect(() => {
     const myendpointId = Analytics.getPluggable('AWSPinpoint')._config
       .endpointId;
+      console.log("enpointconfig", Analytics.getPluggable('AWSPinpoint')._config.endpointId)
     console.log('endpointId', myendpointId);
     setEndpointId(myendpointId);
   }, []);
@@ -140,4 +137,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+//export default App;
+export default withAuthenticator(App, {
+                // Render a sign out button once logged in
+                includeGreetings: true,});
